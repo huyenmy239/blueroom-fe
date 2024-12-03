@@ -7,6 +7,12 @@
     <title>
         Blueroom
     </title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/styles/home.css">
@@ -373,11 +379,15 @@
 
                     <!-- Topic (Combobox) -->
                     <label for="room-topic">Topic:</label>
-                    <select id="room-topic" name="topic">
+                    <select id="room-topic" name="topic" multiple>
                         <option value="general">General</option>
                         <option value="education">Education</option>
                         <option value="business">Business</option>
                         <option value="entertainment">Entertainment</option>
+                        <option value="smile">smile</option>
+                        <option value="cry">cry</option>
+                        <option value="introvert">introvert</option>
+                        <option value="extrovert">extrovert</option>
                     </select>
                     <div id="selected-topics"></div>
 
@@ -411,7 +421,15 @@
 
         
     </div>
-
+    <script>
+        const element = document.getElementById('myChoices');
+        const choices = new Choices(element, {
+          removeItemButton: true, // Cho phép xóa các mục đã chọn
+          maxItemCount: 5,        // Giới hạn số lượng mục có thể chọn
+          searchEnabled: true,    // Kích hoạt tìm kiếm
+        });
+      </script>
+      
     <script src="/js/pages/home.js"></script>
     <script src="/js/components/sidebar.js"></script>
 </body>

@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const createRoomBtn = document.querySelector(".create-room-btn");
     const closePopupCancel = document.getElementById("close-popup");
     const backgroundOptions = document.querySelectorAll("#background-options img");
-    const topicSelect = document.getElementById("room-topic");
-    const selectedTopics = document.getElementById("selected-topics");
     const closePopupBtn = document.querySelector(".close-popup-btn");
 
     // Show popup
@@ -54,17 +52,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Handle topic selection
-    topicSelect.addEventListener("change", () => {
-        const topic = topicSelect.options[topicSelect.selectedIndex].text;
-        if (![...selectedTopics.children].some((span) => span.textContent === topic)) {
-            const span = document.createElement("span");
-            span.textContent = topic;
-            selectedTopics.appendChild(span);
+    const selectElement = document.getElementById('room-topic');
+    const selectedTopicsDiv = document.getElementById('selected-topics');
 
-            // Allow removal of topics by clicking on them
-            span.addEventListener("click", () => {
-                selectedTopics.removeChild(span);
-            });
-        }
+    // Hàm cập nhật danh sách các topic đã chọn
+    function updateSelectedTopics() {
+        // Lấy tất cả các mục đã chọn trong <select>
+        const selectedOptions = Array.from(selectElement.selectedOptions);
+
+        selectedOptions.forEach(option => {
+            // Kiểm tra xem giá trị đã được thêm vào div chưa
+            if (!Array.from(selectedTopicsDiv.children).some(child => child.textContent === option.text)) {
+                const topicDiv = document.createElement('span');
+                topicDiv.textContent = option.text;  // Hiển thị tên của lựa chọn
+                selectedTopicsDiv.appendChild(topicDiv); // Thêm vào div bên ngoài
+            }
+        });
+    }
+
+    // Lắng nghe sự kiện thay đổi trên <select> và cập nhật khi có sự thay đổi
+    selectElement.addEventListener('change', function() {
+        updateSelectedTopics();  // Cập nhật các giá trị đã chọn
     });
+
+    // Cập nhật giao diện ban đầu (nếu có các giá trị đã chọn từ trước)
+    updateSelectedTopics();
+
+
+    
 });
