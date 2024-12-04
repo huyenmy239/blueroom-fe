@@ -456,10 +456,6 @@ input[type="text"], select {
     border-color: blue;
 }
 
-#background-options input[type="radio"] {
-    display: none;
-}
-
 /* Topic Selection */
 #room-topic {
     display: inline-block;

@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popup");
     const createRoomBtn = document.querySelector(".create-room-btn");
     const closePopupCancel = document.getElementById("close-popup");
-    const backgroundOptions = document.querySelectorAll("#background-options img");
     const closePopupBtn = document.querySelector(".close-popup-btn");
 
     // Show popup
@@ -39,17 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Select background
-    backgroundOptions.forEach((img) => {
-        img.addEventListener("click", () => {
-            backgroundOptions.forEach((i) => i.classList.remove("selected"));
-            img.classList.add("selected");
-            // Set the value of the selected background to a hidden input
-            const backgroundInput = document.querySelector("input[name='background']");
-            if (backgroundInput) {
-                backgroundInput.value = img.getAttribute("data-value");
-            }
-        });
+    const backgroundOptions = document.querySelectorAll(".background-image");
+
+backgroundOptions.forEach((img) => {
+    img.addEventListener("click", () => {
+        // Xóa class 'selected' khỏi tất cả các ảnh
+        backgroundOptions.forEach((i) => i.classList.remove("selected"));
+
+        // Thêm class 'selected' vào ảnh được click
+        img.classList.add("selected");
+
+        // Lấy giá trị của ảnh được chọn
+        const selectedBackground = img.getAttribute("data-bg-img");
+        console.log("Background được chọn:", selectedBackground);
+
+        // Bạn có thể sử dụng giá trị này để thực hiện hành động khác (lưu, hiển thị, gửi đi, ...)
     });
+});
+
 
     // Handle topic selection
     const selectElement = document.getElementById('room-topic');
