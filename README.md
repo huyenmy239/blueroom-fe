@@ -85,21 +85,6 @@ Once the application is running, users can:
 - **APIs** for data handling (integrated via `api.js`)
 
 
-## Contributing
-
-If you would like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-
-2. Create a new branch (`git checkout -b feature-branch`).
-
-3. Make your changes and commit them (`git commit -am 'Add new feature'`).
-
-4. Push to your fork (`git push origin feature-branch`).
-
-5. Open a pull request with a description of the changes.
-
-
 ## Contributors
 
 The BlueRoom frontend was developed with contributions from the following team members:
