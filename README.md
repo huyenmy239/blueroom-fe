@@ -59,10 +59,9 @@ To get started with the project locally, follow these steps:
 
 4. Open the `index.html` file in a browser to view the homepage.
 
-Alternatively, you can use a local server setup like `live-server` for a smoother experience.
+5. **Backend Repository Link:** [BlueRoom Backend GitHub](https://github.com/huyenmy239/blueroom-be)
 
-# Link to the Backend
-- **Backend Repository Link:** [BlueRoom Backend GitHub](https://github.com/huyenmy239/blueroom-be)
+Alternatively, you can use a local server setup like `live-server` for a smoother experience.
 
 ## Usage
 
