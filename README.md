@@ -47,12 +47,12 @@ To get started with the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/huyenmy239/blueroom-fe
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd <project-directory>
+   cd blueroom-fe
    ```
 
 3. Open the project in your favorite code editor.
@@ -60,6 +60,9 @@ To get started with the project locally, follow these steps:
 4. Open the `index.html` file in a browser to view the homepage.
 
 Alternatively, you can use a local server setup like `live-server` for a smoother experience.
+
+# Link to the Backend
+- **Backend Repository Link:** [BlueRoom Backend GitHub](https://github.com/huyenmy239/blueroom-be)
 
 ## Usage
 
@@ -95,3 +98,13 @@ If you would like to contribute to this project, please follow these steps:
 4. Push to your fork (`git push origin feature-branch`).
 
 5. Open a pull request with a description of the changes.
+
+
+## Contributors
+
+The BlueRoom frontend was developed with contributions from the following team members:
+
+| Name              | Tasks and Features Contributed                                   | GitHub Profile                          | Avatar                                 |
+|-------------------|------------------------------------------------------------------|-----------------------------------------|----------------------------------------|
+| Nguyen Thi Huyen My          | Build the user interface and call APIs for the features. | [huyenmy239](https://github.com/huyenmy239) | <img src="https://avatars.githubusercontent.com/huyenmy239" width="50" /> |
+| Nguyen Thi Thanh Huyen          | Design the website interface using Figma and UI components for reports, statistics, and the user interface. | [zethro](https://github.com/zethro)   | <img src="https://avatars.githubusercontent.com/zethro" width="50" /> |
